@@ -1,0 +1,446 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{17DDC839-542F-47D5-A9C5-3DC97C87EA40}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>DigitalHealthCarePro</RootNamespace>
+    <AssemblyName>DigitalHealthCarePro</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin\FormChkStat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\FormChkStat.Designer.cs">
+      <DependentUpon>FormChkStat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\FormChkTrans.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\FormChkTrans.Designer.cs">
+      <DependentUpon>FormChkTrans.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\FormMngHp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\FormMngHp.Designer.cs">
+      <DependentUpon>FormMngHp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\FormMngDoctor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\FormMngDoctor.Designer.cs">
+      <DependentUpon>FormMngDoctor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\FormMngPatient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\FormMngPatient.Designer.cs">
+      <DependentUpon>FormMngPatient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess.cs" />
+    <Compile Include="Admin\FormAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\FormAdmin.Designer.cs">
+      <DependentUpon>FormAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DHCDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DHCDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Doctor\FormChkStat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Doctor\FormChkStat.Designer.cs">
+      <DependentUpon>FormChkStat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Doctor\FormEditDoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Doctor\FormEditDoc.Designer.cs">
+      <DependentUpon>FormEditDoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Doctor\FormRcntPat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Doctor\FormRcntPat.Designer.cs">
+      <DependentUpon>FormRcntPat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAbout.Designer.cs">
+      <DependentUpon>FormAbout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRegister.Designer.cs">
+      <DependentUpon>FormRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Hospital\FormAccessPres.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hospital\FormAccessPres.Designer.cs">
+      <DependentUpon>FormAccessPres.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Hospital\FormAccessRep.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hospital\FormAccessRep.Designer.cs">
+      <DependentUpon>FormAccessRep.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Hospital\FormChcPay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hospital\FormChcPay.Designer.cs">
+      <DependentUpon>FormChcPay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Hospital\FormChkBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hospital\FormChkBook.Designer.cs">
+      <DependentUpon>FormChkBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Hospital\FormChkStat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hospital\FormChkStat.Designer.cs">
+      <DependentUpon>FormChkStat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Hospital\FormEditHp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hospital\FormEditHp.Designer.cs">
+      <DependentUpon>FormEditHp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Hospital\FormHp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hospital\FormHp.Designer.cs">
+      <DependentUpon>FormHp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Hospital\FormMngTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hospital\FormMngTest.Designer.cs">
+      <DependentUpon>FormMngTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Hospital\FormRcntPat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hospital\FormRcntPat.Designer.cs">
+      <DependentUpon>FormRcntPat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Hospital\FormSndRep.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hospital\FormSndRep.Designer.cs">
+      <DependentUpon>FormSndRep.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Doctor\FormChkPay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Doctor\FormChkPay.Designer.cs">
+      <DependentUpon>FormChkPay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Doctor\FormAccessRep.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Doctor\FormAccessRep.Designer.cs">
+      <DependentUpon>FormAccessRep.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Doctor\FormAccessPres.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Doctor\FormAccessPres.Designer.cs">
+      <DependentUpon>FormAccessPres.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Doctor\FormDoctor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Doctor\FormDoctor.Designer.cs">
+      <DependentUpon>FormDoctor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Doctor\FormChkBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Doctor\FormChkBook.Designer.cs">
+      <DependentUpon>FormChkBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Doctor\FormSndPres.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Doctor\FormSndPres.Designer.cs">
+      <DependentUpon>FormSndPres.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Patient\FormBookHp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Patient\FormBookHp.Designer.cs">
+      <DependentUpon>FormBookHp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Patient\FormBookDoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Patient\FormBookDoc.Designer.cs">
+      <DependentUpon>FormBookDoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Patient\FormEditPat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Patient\FormEditPat.Designer.cs">
+      <DependentUpon>FormEditPat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Patient\FormFndHp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Patient\FormFndHp.Designer.cs">
+      <DependentUpon>FormFndHp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Patient\FormFndDoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Patient\FormFndDoc.Designer.cs">
+      <DependentUpon>FormFndDoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Patient\FormMakePay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Patient\FormMakePay.Designer.cs">
+      <DependentUpon>FormMakePay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Patient\FormOwnPres.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Patient\FormOwnPres.Designer.cs">
+      <DependentUpon>FormOwnPres.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Patient\FormOwnRep.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Patient\FormOwnRep.Designer.cs">
+      <DependentUpon>FormOwnRep.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Patient\FormPatient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Patient\FormPatient.Designer.cs">
+      <DependentUpon>FormPatient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Admin\FormAdmin.resx">
+      <DependentUpon>FormAdmin.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\FormChkStat.resx">
+      <DependentUpon>FormChkStat.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\FormChkTrans.resx">
+      <DependentUpon>FormChkTrans.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\FormMngHp.resx">
+      <DependentUpon>FormMngHp.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\FormMngDoctor.resx">
+      <DependentUpon>FormMngDoctor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\FormMngPatient.resx">
+      <DependentUpon>FormMngPatient.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Doctor\FormChkStat.resx">
+      <DependentUpon>FormChkStat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Doctor\FormEditDoc.resx">
+      <DependentUpon>FormEditDoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Doctor\FormRcntPat.resx">
+      <DependentUpon>FormRcntPat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAbout.resx">
+      <DependentUpon>FormAbout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRegister.resx">
+      <DependentUpon>FormRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hospital\FormAccessPres.resx">
+      <DependentUpon>FormAccessPres.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hospital\FormAccessRep.resx">
+      <DependentUpon>FormAccessRep.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hospital\FormChcPay.resx">
+      <DependentUpon>FormChcPay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hospital\FormChkBook.resx">
+      <DependentUpon>FormChkBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hospital\FormChkStat.resx">
+      <DependentUpon>FormChkStat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hospital\FormEditHp.resx">
+      <DependentUpon>FormEditHp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hospital\FormHp.resx">
+      <DependentUpon>FormHp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hospital\FormMngTest.resx">
+      <DependentUpon>FormMngTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hospital\FormRcntPat.resx">
+      <DependentUpon>FormRcntPat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hospital\FormSndRep.resx">
+      <DependentUpon>FormSndRep.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Doctor\FormChkPay.resx">
+      <DependentUpon>FormChkPay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Doctor\FormAccessRep.resx">
+      <DependentUpon>FormAccessRep.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Doctor\FormAccessPres.resx">
+      <DependentUpon>FormAccessPres.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Doctor\FormDoctor.resx">
+      <DependentUpon>FormDoctor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Doctor\FormChkBook.resx">
+      <DependentUpon>FormChkBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Doctor\FormSndPres.resx">
+      <DependentUpon>FormSndPres.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Patient\FormBookHp.resx">
+      <DependentUpon>FormBookHp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Patient\FormBookDoc.resx">
+      <DependentUpon>FormBookDoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Patient\FormEditPat.resx">
+      <DependentUpon>FormEditPat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Patient\FormFndHp.resx">
+      <DependentUpon>FormFndHp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Patient\FormFndDoc.resx">
+      <DependentUpon>FormFndDoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Patient\FormMakePay.resx">
+      <DependentUpon>FormMakePay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Patient\FormOwnPres.resx">
+      <DependentUpon>FormOwnPres.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Patient\FormOwnRep.resx">
+      <DependentUpon>FormOwnRep.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Patient\FormPatient.resx">
+      <DependentUpon>FormPatient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="DHCDataSet.xsc">
+      <DependentUpon>DHCDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DHCDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DHCDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DHCDataSet.xss">
+      <DependentUpon>DHCDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="filter.png" />
+    <Content Include="logo.png" />
+    <Content Include="raf.jpeg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
